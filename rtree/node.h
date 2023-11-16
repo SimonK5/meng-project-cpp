@@ -9,17 +9,18 @@
 class Node {
  public:
   int level;
-  std::shared_ptr<Rect> rect;
-  std::vector<std::shared_ptr<Node>> children;
-  std::shared_ptr<Node> obj;
+  Rect* rect;
+  std::vector<Node*> children;
+  Node* obj;
 
-  Node(int x1, int y1, int x2, int y2,
-       std::vector<std::shared_ptr<Node>> children, int level);
+  Node(int x1, int y1, int x2, int y2, std::vector<Node*> children, int level);
 
-  Node(std::shared_ptr<Rect> r, std::vector<std::shared_ptr<Node>> children,
-       int level);
+  Node(Rect* r, std::vector<Node*> children, int level);
 
-  Node(std::shared_ptr<Rect> r);
+  Node(Rect* r);
+
+ private:
+  ~Node();
 };
 
 #endif

@@ -9,10 +9,9 @@ class Rect {
 
   Rect(int x1, int y1, int x2, int y2);
 
-  bool contains(const std::shared_ptr<Rect> other) const;
-  bool intersects(const std::shared_ptr<Rect> other) const;
-  std::shared_ptr<Rect> enlargeToContain(
-      const std::shared_ptr<Rect> other) const;
+  bool contains(const Rect& other) const;
+  bool intersects(const Rect& other) const;
+  Rect enlargeToContain(const Rect& other) const;
   int area() const;
 };
 
