@@ -11,6 +11,19 @@
       "environment": [],
       "externalConsole": false,
       "MIMode": "lldb"
+    },
+    {
+      "name": "C/C++: clang++ build and debug active file bruh",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/rtree/rtree",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${fileDirname}/",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "lldb",
+      "preLaunchTask": "C/C++: clang++ build active file"
     }
   ],
   "version": "2.0.0"
