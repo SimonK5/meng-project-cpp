@@ -2,24 +2,33 @@
 #define OBJ_H
 
 #include <memory>
+#include <random>
+#include <string>
 #include <vector>
+#include <cugl/cugl.h>
 
-#include "geometry.h"
+using namespace cugl;
 
 class RTreeObject {
- public:
-  // The bounding box of this object
-  Rect* rect;
+public:
+    // The bounding box of this object
+    Rect rect;
+    float velX;
+    float velY;
 
-  /**
-   * @param x1 The x-coordinate of the lower-left corner.
-   * @param y1 The y-coordinate of the lower-left corner.
-   * @param x2 The x-coordinate of the upper-right corner.
-   * @param y2 The y-coordinate of the upper-right corner.
-   */
-  RTreeObject(int x1, int y1, int x2, int y2);
+    /**
+    * @param x1 The x-coordinate of the lower-left corner.
+    * @param y1 The y-coordinate of the lower-left corner.
+    * @param width The x-coordinate of the upper-right corner.
+    * @param height The y-coordinate of the upper-right corner.
+    */
+    RTreeObject(float x1, float y1, float width, float height);
 
-  ~RTreeObject();
+    void update(float mapWidth, float mapHeight);
+
+    std::string print();
+    
+    void draw(const std::shared_ptr<SpriteBatch>& batch);
 };
 
 #endif
