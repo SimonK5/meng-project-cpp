@@ -2,15 +2,11 @@
 #define RTREE_H
 
 #include <memory>
-
 #include <unordered_map>
-
 #include <unordered_set>
-
 #include <vector>
 
 #include "rtreenode.h"
-
 #include "rtreeobject.h"
 
 #include <cugl/cugl.h>
